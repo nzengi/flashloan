@@ -1,0 +1,31 @@
+{
+  "name": "flashloan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy-mainnet.js --network mainnet",
+    "estimate-gas": "node estimate-gas.js --network mainnet"
+  },
+  "keywords": [
+    "arbitrage",
+    "flashloan",
+    "ethereum",
+    "defi"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Flash loan arbitrage bot for Ethereum mainnet",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "dotenv": "^17.0.1",
+    "hardhat": "^2.17.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "chai": "^4.3.7",
+    "ethers": "^5.7.2"
+  }
+}

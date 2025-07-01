@@ -1,0 +1,401 @@
+# Bot Environment Variables & Secrets
+.env
+deploy.env
+config.js
+*.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Private Keys & Wallets
+*.pem
+*.key
+wallet.json
+keystore/
+wallets/
+private-keys/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Data files
+data/
+*.json
+!package.json
+!package-lock.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Temporary folders
+tmp/
+temp/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Redis dump
+dump.rdb
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.lnk
+
+# Linux
+*~
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Certificate files
+*.crt
+*.pem
+*.key
+
+# API keys and secrets
+api-keys.json
+secrets.json
+credentials.json
+
+# Monitoring and analytics
+analytics/
+metrics/
+stats/
+
+# Backup and recovery
+backup/
+recovery/
+
+# Testing
+test-results/
+coverage/
+.nyc_output/
+
+# Performance
+performance/
+benchmarks/
+
+# Security
+security/
+vulnerabilities/
+
+# Bot specific
+# Configuration files that might contain sensitive data
+config.local.js
+config.private.js
+config.production.js
+
+# Cache files
+.cache/
+cache/
+
+# Session files
+session.json
+session-*.json
+
+# Transaction history
+transactions/
+tx-history/
+
+# Price cache
+price-cache/
+cache/
+
+# Gas price cache
+gas-cache/
+
+# Arbitrage data
+arbitrage-data/
+opportunities/
+
+# Performance metrics
+performance-metrics/
+stats/
+
+# Error logs
+error-logs/
+crash-logs/
+
+# Debug files
+debug/
+*.debug
+
+# Test files
+test-*.js
+*.test.js
+*.spec.js
+
+# Temporary bot files
+bot-temp/
+temp-bot/
+
+# Bot state files
+bot-state.json
+state.json
+
+# Bot lock files
+bot.lock
+*.lock
+
+# Bot pid files
+bot.pid
+*.pid
+
+# Bot socket files
+bot.sock
+*.sock
+
+# Bot memory dumps
+*.dump
+memory-dump/
+
+# Bot core dumps
+core.*
+core-*
+
+# Bot crash reports
+crash-reports/
+*.crash
+
+# Bot analytics
+analytics/
+bot-analytics/
+
+# Bot monitoring
+monitoring/
+bot-monitoring/
+
+# Bot health checks
+health-checks/
+bot-health/
+
+# Bot metrics
+metrics/
+bot-metrics/
+
+# Bot alerts
+alerts/
+bot-alerts/
+
+# Bot notifications
+notifications/
+bot-notifications/
+
+# Bot webhooks
+webhooks/
+bot-webhooks/
+
+# Bot API
+api/
+bot-api/
+
+# Bot dashboard
+dashboard/
+bot-dashboard/
+
+# Bot admin
+admin/
+bot-admin/
+
+# Bot config backups
+config-backup/
+backup-config/
+
+# Bot data backups
+data-backup/
+backup-data/
+
+# Bot logs backup
+logs-backup/
+backup-logs/
+
+# Bot state backup
+state-backup/
+backup-state/
+
+# Bot cache backup
+cache-backup/
+backup-cache/
+
+# Bot temp backup
+temp-backup/
+backup-temp/
+
+# Bot session backup
+session-backup/
+backup-session/
+
+# Bot transaction backup
+transaction-backup/
+backup-transaction/
+
+# Bot price backup
+price-backup/
+backup-price/
+
+# Bot gas backup
+gas-backup/
+backup-gas/
+
+# Bot arbitrage backup
+arbitrage-backup/
+backup-arbitrage/
+
+# Bot performance backup
+performance-backup/
+backup-performance/
+
+# Bot error backup
+error-backup/
+backup-error/
+
+# Bot debug backup
+debug-backup/
+backup-debug/
+
+# Bot test backup
+test-backup/
+backup-test/
+
+# Bot analytics backup
+analytics-backup/
+backup-analytics/
+
+# Bot monitoring backup
+monitoring-backup/
+backup-monitoring/
+
+# Bot health backup
+health-backup/
+backup-health/
+
+# Bot metrics backup
+metrics-backup/
+backup-metrics/
+
+# Bot alerts backup
+alerts-backup/
+backup-alerts/
+
+# Bot notifications backup
+notifications-backup/
+backup-notifications/
+
+# Bot webhooks backup
+webhooks-backup/
+backup-webhooks/
+
+# Bot API backup
+api-backup/
+backup-api/
+
+# Bot dashboard backup
+dashboard-backup/
+backup-dashboard/
+
+# Bot admin backup
+admin-backup/
+backup-admin/
+
+# Project specific
+# Add any bot-specific files or directories here 
