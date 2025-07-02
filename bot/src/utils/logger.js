@@ -1,5 +1,5 @@
 const pino = require("pino");
-const config = require("../config/config");
+const config = require("../../config/config");
 
 // Create logger instance
 const pinoLogger = pino({

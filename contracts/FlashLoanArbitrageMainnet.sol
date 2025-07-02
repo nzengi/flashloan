@@ -144,7 +144,7 @@ contract ArbitragerV3 is IFlashLoanReceiver {
             0 // referralCode
         );
     }
-
+    
     function _arbitrage(
         address borrowedToken,
         uint256 amount,
@@ -193,7 +193,7 @@ contract ArbitragerV3 is IFlashLoanReceiver {
     ) private view {
         IUniswapV2Router02 router1 = _getRouter(extraData.firstRouter);
         IUniswapV2Router02 router2 = _getRouter(extraData.secondRouter);
-        
+
         uint256 amountOutSwapToken = _getAmountOut(router1, borrowedToken, extraData.swapToken, amount);
         uint256 amountOutBorrowedToken = _getAmountOut(router2, extraData.swapToken, borrowedToken, amountOutSwapToken);
         
@@ -210,7 +210,7 @@ contract ArbitragerV3 is IFlashLoanReceiver {
         address[] memory path = new address[](2);
         path[0] = tokenIn;
         path[1] = tokenOut;
-        
+
         uint256[] memory amountOutMins = router.getAmountsOut(amountIn, path);
         return amountOutMins[path.length - 1];
     }
@@ -218,12 +218,12 @@ contract ArbitragerV3 is IFlashLoanReceiver {
     function _getRouter(Exchange router) private view returns (IUniswapV2Router02) {
         return router == Exchange.UNI ? uniswapRouter : sushiswapRouter;
     }
-
+    
     function _validateArbitrageParams(ExtraData calldata extraData) private pure {
         require(extraData.firstRouter != extraData.secondRouter, "SAME_ROUTER");
         require(extraData.swapToken != address(0), "INVALID_SWAP_TOKEN");
         require(extraData.minProfit > 0, "INVALID_MIN_PROFIT");
-    }
+        }
 
     function withdrawToken(address token, uint256 amount) external onlyOwner {
         IERC20(token).transfer(owner, amount);
