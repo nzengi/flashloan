@@ -1,7 +1,6 @@
 # Bot Environment Variables & Secrets
 .env
 deploy.env
-config.js
 *.env
 .env.local
 .env.development
