@@ -38,21 +38,90 @@ flashloan/
 
 ### Prerequisites
 
-- Node.js 16+
-- npm or yarn
-- Ethereum wallet with ETH for gas fees
-- Alchemy API key
+- **Node.js 18+** - [Download from nodejs.org](https://nodejs.org/)
+- **Git** - [Download from git-scm.com](https://git-scm.com/)
+- **Ethereum wallet** with ETH for gas fees
+- **Alchemy API key** - [Get free key from alchemy.com](https://www.alchemy.com/)
 
-### 1. Clone Repository
+### Installation Options
+
+#### Option 1: Desktop Application (Recommended)
+
+1. **Clone and setup Electron app**
 
 ```bash
+git clone https://github.com/nzengi/flashloan.git
+cd flashloan/electron-app
+```
+
+2. **Install dependencies**
+
+```bash
+# Windows (run as administrator)
+install-windows.bat
+
+# Or manually:
+npm install
+cd src/renderer && npm install && cd ../..
+```
+
+3. **Start the desktop app**
+
+```bash
+npm run dev
+```
+
+#### Option 2: Command Line Bot
+
+1. **Clone repository**
+
+```bash
+git clone https://github.com/nzengi/flashloan.git
+cd flashloan
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+cd bot && npm install
+```
+
+3. **Configure the bot**
+
+```bash
+cp bot/config.example.js bot/config.js
+# Edit bot/config.js with your settings
+```
+
+4. **Start the bot**
+
+```bash
+cd bot && npm start
+```
+
+### Windows Installation (Command Line Bot)
+
+#### Option 1: Automated Setup (Recommended)
+
+1. **Download and extract** the project to your desired location
+2. **Double-click** `install-windows.bat` to run the automated installer
+3. **Follow the prompts** - the script will check prerequisites and install everything
+4. **Edit configuration files** as described below
+
+#### Option 2: Manual Setup
+
+#### 1. Clone Repository
+
+```cmd
+# Open Command Prompt or PowerShell
 git clone <your-repo-url>
 cd flashloan
 ```
 
-### 2. Install Dependencies
+#### 2. Install Dependencies
 
-```bash
+```cmd
 # Install main dependencies
 npm install
 
@@ -62,19 +131,41 @@ npm install
 cd ..
 ```
 
-### 3. Environment Setup
+#### 3. Environment Setup
 
-```bash
-# Copy environment files
-cp deploy.env.example deploy.env
-cp bot/config.example.js bot/src/config/config.js
+```cmd
+# Copy environment files (Windows)
+copy deploy.env.example deploy.env
+copy bot\config.example.js bot\src\config\config.js
 
-# Edit configuration files with your settings
+# Or using PowerShell
+Copy-Item deploy.env.example deploy.env
+Copy-Item bot\config.example.js bot\src\config\config.js
 ```
 
-### 4. Configure Environment Variables
+#### 4. Edit Configuration Files
 
-Edit `deploy.env`:
+**Option A: Using Notepad**
+
+```cmd
+notepad deploy.env
+notepad bot\src\config\config.js
+```
+
+**Option B: Using VS Code**
+
+```cmd
+code deploy.env
+code bot\src\config\config.js
+```
+
+**Option C: Using any text editor**
+
+- Right-click on the file → Open with → Choose your editor
+
+### 5. Configure Environment Variables
+
+**Edit `deploy.env`:**
 
 ```env
 MAINNET_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/YOUR_API_KEY
@@ -82,25 +173,75 @@ PRIVATE_KEY=your_private_key_here
 ARBITRAGE_CONTRACT_ADDRESS=your_deployed_contract_address
 ```
 
-Edit `bot/src/config/config.js`:
+**Edit `bot\src\config\config.js`:**
 
 ```javascript
 // Update with your contract addresses and settings
 ```
 
-### 5. Deploy Smart Contract
+### 6. Deploy Smart Contract
 
-```bash
-# Deploy to mainnet
-npx hardhat run scripts/deploy-mainnet.js --network mainnet
+```cmd
+# Deploy to mainnet (Windows)
+npx hardhat run scripts\deploy-mainnet.js --network mainnet
 ```
 
-### 6. Start Bot
+### 7. Start Bot
 
-```bash
+```cmd
+# Start the bot (Windows)
 cd bot
-node src/index.js
+node src\index.js
 ```
+
+### 8. Windows-Specific Notes
+
+#### File Paths
+
+- Use backslashes (`\`) instead of forward slashes (`/`)
+- Example: `bot\src\config\config.js`
+
+#### Command Prompt vs PowerShell
+
+- **Command Prompt**: Use `copy` command
+- **PowerShell**: Use `Copy-Item` command
+
+#### Node.js Installation
+
+1. Download from [nodejs.org](https://nodejs.org/)
+2. Run the installer
+3. Restart Command Prompt/PowerShell
+4. Verify installation: `node --version`
+
+#### Git Installation
+
+1. Download from [git-scm.com](https://git-scm.com/)
+2. Run the installer
+3. Use default settings
+4. Restart Command Prompt/PowerShell
+5. Verify installation: `git --version`
+
+#### Troubleshooting Windows Issues
+
+**"node is not recognized"**
+
+- Restart Command Prompt after Node.js installation
+- Check if Node.js is in PATH
+
+**"git is not recognized"**
+
+- Restart Command Prompt after Git installation
+- Check if Git is in PATH
+
+**"Permission denied"**
+
+- Run Command Prompt as Administrator
+- Check file permissions
+
+**"Path too long"**
+
+- Use shorter folder names
+- Move project to root directory (e.g., `C:\flashloan`)
 
 ## ⚙️ Configuration
 
