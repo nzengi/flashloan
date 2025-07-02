@@ -1,10 +1,30 @@
 const pino = require("pino");
-const config = require("../../config/config");
+
+// Try to load config, use defaults if not available
+let config;
+try {
+  config = require("../../config/config");
+} catch (error) {
+  // Use default config if config file is not available
+  config = {
+    logging: {
+      level: "info",
+      console: {
+        enabled: true,
+        pretty: true,
+      },
+      file: {
+        enabled: false,
+        path: "./logs/bot.log",
+      },
+    },
+  };
+}
 
 // Create logger instance
 const pinoLogger = pino({
-  level: config.logging.level,
-  transport: config.logging.console.pretty
+  level: config.logging?.level || "info",
+  transport: config.logging?.console?.pretty
     ? {
         target: "pino-pretty",
         options: {
@@ -24,7 +44,7 @@ const pinoLogger = pino({
 
 // File logger for production
 let fileLogger = null;
-if (config.logging.file.enabled) {
+if (config.logging?.file?.enabled) {
   const fs = require("fs");
   const path = require("path");
 
@@ -35,7 +55,7 @@ if (config.logging.file.enabled) {
   }
 
   fileLogger = pino({
-    level: config.logging.level,
+    level: config.logging?.level || "info",
     transport: {
       target: "pino/file",
       options: {
