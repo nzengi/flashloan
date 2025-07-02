@@ -34,7 +34,6 @@ coverage.json
 # Bot specific
 bot/logs/
 bot/data/
-bot/config.js
 bot/.env
 bot/deploy.env
 
@@ -194,7 +193,6 @@ hardhat.config.local.js
 hardhat.config.private.js
 
 # Bot configuration files
-bot/config.js
 bot/.env
 bot/deploy.env
 
@@ -369,28 +367,3 @@ Temporary Items
 
 # Project specific
 # Add any project-specific files or directories here
-
-# Electron App
-electron-app/dist/
-electron-app/node_modules/
-electron-app/src/renderer/node_modules/
-electron-app/src/renderer/build/
-electron-app/package-lock.json
-electron-app/src/renderer/package-lock.json
-
-# Electron build artifacts
-*.dmg
-*.exe
-*.AppImage
-*.deb
-*.rpm
-*.snap
-*.zip
-*.tar.gz
-
-# Electron logs
-electron-app/logs/
-*.log
-
-# Electron store
-electron-app/store/

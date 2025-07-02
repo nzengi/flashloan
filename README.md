@@ -38,69 +38,12 @@ flashloan/
 
 ### Prerequisites
 
-- **Node.js 18+** - [Download from nodejs.org](https://nodejs.org/)
+- **Node.js 16+** - [Download from nodejs.org](https://nodejs.org/)
 - **Git** - [Download from git-scm.com](https://git-scm.com/)
 - **Ethereum wallet** with ETH for gas fees
 - **Alchemy API key** - [Get free key from alchemy.com](https://www.alchemy.com/)
 
-### Installation Options
-
-#### Option 1: Desktop Application (Recommended)
-
-1. **Clone and setup Electron app**
-
-```bash
-git clone https://github.com/nzengi/flashloan.git
-cd flashloan/electron-app
-```
-
-2. **Install dependencies**
-
-```bash
-# Windows (run as administrator)
-install-windows.bat
-
-# Or manually:
-npm install
-cd src/renderer && npm install && cd ../..
-```
-
-3. **Start the desktop app**
-
-```bash
-npm run dev
-```
-
-#### Option 2: Command Line Bot
-
-1. **Clone repository**
-
-```bash
-git clone https://github.com/nzengi/flashloan.git
-cd flashloan
-```
-
-2. **Install dependencies**
-
-```bash
-npm install
-cd bot && npm install
-```
-
-3. **Configure the bot**
-
-```bash
-cp bot/config.example.js bot/config.js
-# Edit bot/config.js with your settings
-```
-
-4. **Start the bot**
-
-```bash
-cd bot && npm start
-```
-
-### Windows Installation (Command Line Bot)
+### Windows Installation
 
 #### Option 1: Automated Setup (Recommended)
 
